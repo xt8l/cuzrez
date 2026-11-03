@@ -1,0 +1,55 @@
+Layout for StretchRes
+====================
+
+This directory contains user interface layout files for the StretchRes preference bundle.
+
+UI Design Approach
+-----------------
+
+The StretchRes preference bundle uses Apple's PSPreferences framework specifiers 
+defined entirely in plist files (Root.plist). This approach is used instead of 
+storyboard or XIB files for the following reasons:
+
+1. **Lightweight**: plist-defined interfaces are faster to load and have fewer 
+   runtime dependencies than storyboards.
+
+2. **iOS 15 Compatibility**: PSPreferences specifiers are fully compatible with 
+   iOS 15.0+ and work correctly in the Dopamine rootless jailbreak environment.
+
+3. **Theos Standard**: Theos preference bundles traditionally use plist-based 
+   specifier files for the UI configuration.
+
+4. **No Xcode Required**: The entire tweak, including the preferences UI, can be 
+   built and packaged using only Theos without needing Xcode or Interface Builder.
+
+UI Files
+-------
+
+- Root.plist - The main preference specifier file defining all UI elements:
+  - Group headers, labels, text fields, buttons, radio buttons, and toggle switches
+  - Action methods connected to the Tweak.x implementation
+  - Preferences persistence using NSUserDefaults
+
+- No storyboard/XIB files are needed because the entire preference UI is 
+  configured through plist dictationary entries.
+
+- The PSNumberTextField, PSLabel, PSButton, PSRadioButton, and PSToggleSwitch 
+  types are all standard PSPreferences specifier types that render natively 
+  on iOS 15.
+
+Known Layout Considerations
+--------------------------
+
+- The interface is designed to be compatible with iPhone 6s/7 series native 
+  resolutions (1334x750 portrait, 750x1334 landscape).
+
+- On older devices with smaller screens, the interface gracefully adjusts 
+  by scaling down non-essential elements while keeping primary controls 
+  accessible.
+
+- Additional device-compatible presets are available that auto-detect the 
+  device model and suggest appropriate resolution values.
+
+Files in this directory:
+- Root.plist (also located in the project root for Theos bundle build)
+- README.md (this file)

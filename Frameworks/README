@@ -1,0 +1,18 @@
+Frameworks for StretchRes
+========================
+
+This directory contains third-party frameworks required by the StretchRes tweak.
+
+Frameworks referenced:
+- UIKit: The primary framework for iOS UI development. All UI components 
+  in the preference bundle (PSGroupHeader, PSLabel, PSButton, PSNumberTextField, 
+  PSToggleSwitch, PSRadioButton) are from UIKit. Headers are provided by Theos.
+- Foundation: Core framework for NSUserDefaults, NSFileManager, NSDictionary, 
+  NSString, and other fundamental classes. Provided by Theos.
+
+No additional third-party frameworks are required. The tweak avoids unnecessary 
+dependencies and stays compatible with iOS 15.0–15.8.8.
+
+Files in this directory:
+- UIKit headers (provided by Theos)
+- Foundation headers (provided by Theos)

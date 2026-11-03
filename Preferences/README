@@ -1,0 +1,56 @@
+Preferences Implementation for StretchRes
+=========================================
+
+This directory contains the preference bundle implementation for the StretchRes tweak.
+
+Preference Bundle Structure
+--------------------------
+
+The preference bundle is built using Theos's bundle.makefile integration and 
+consists of the following components:
+
+1. Root.plist (project root) - The main preference specifier file that defines
+   all UI elements including:
+   - Group headers and section titles
+   - PSLabel elements for displaying current/original resolution
+   - PSNumberTextField for custom width/height input
+   - PSButton for Apply and Reset actions
+   - PSRadioButton for preset selection (Native, 16:9, Custom, Portrait, Landscape)
+   - PSToggleSwitch for Enable/Disable and Auto Apply options
+   - PSFooter credits and compatibility info
+
+2. Tweak.x - The main tweak implementation that handles:
+   - Resolution changing via IOMobileGraphicsFamily plist manipulation
+   - User preference storage using NSUserDefaults
+   - XPC notification to SpringBoard for display reload
+   - Device detection and resolution validation
+   - Respring configuration restoration
+
+3. Info.plist - Tweak metadata including iOS 15.0 minimum deployment target
+
+Preference Storage Mechanism
+---------------------------
+
+User preferences are stored using NSUserDefaults with the following keys:
+- last_preset: Selected preset type (native, 16:9, custom, portrait, landscape)
+- custom_width: Custom width value in pixels
+- custom_height: Custom height value in pixels
+- tweak_enabled: Enable/disable toggle state
+- auto_apply_after_respring: Auto-apply configuration after respring
+
+The preference bundle filename is "StretchRes" as specified in Root.plist:
+<prefs:filename>StretchRes</prefs:filename>
+
+UI Design Philosophy
+-------------------
+
+- All UI elements are defined in Root.plist using PSPreferences specifier types
+- No storyboard or XIB files are used, keeping the tweak lightweight and
+  compatible with iOS 15 without requiring Xcode or Interface Builder
+- The interface is designed to be compatible with iPhone 6s/7 series native 
+  resolutions and smaller older device screens
+- Device-compatible presets auto-detect the device model and suggest appropriate
+  resolution values based on native bounds
+
+Files in this directory:
+- README.md (this file)

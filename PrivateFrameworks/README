@@ -1,0 +1,22 @@
+PrivateFrameworks for StretchRes
+================================
+
+This directory contains development headers for private frameworks 
+required by the StretchRes tweak. These headers are typically obtained 
+from the iOS device or Apple Developer website.
+
+Frameworks referenced:
+- IOKit: Used for IOMobileGraphicsFamily plist manipulation and 
+  display configuration. The IOKit.h header is included in Tweak.x 
+  via <IOKit/IOKit.h>.
+- BackboardServices: Conceptually used for SpringBoard/backboardd 
+  interaction, though the current implementation uses XPC messaging 
+  instead of direct framework calls.
+
+Note: Theos provides many of these headers through /opt/theos/include. 
+For iOS 15.0–15.8.8 compatibility, ensure you are using headers 
+compatible with the target OS version. Do not use iOS 16+ only APIs.
+
+Files in this directory:
+- IOKit headers (provided by Theos or device headers)
+- BackboardServices headers (if additional framework integration is needed)

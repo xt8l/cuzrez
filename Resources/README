@@ -1,0 +1,50 @@
+Resources for StretchRes
+=======================
+
+This directory is part of the StretchRes Theos project structure. For this 
+jailbreak tweak, the Resources directory serves the following purposes:
+
+Primary Purpose
+--------------
+
+The Resources directory is designated for any bundle resources such as:
+- Application/icon images
+- Default/launch images
+- Asset catalogs
+- Localization files
+- Helper scripts or data files
+
+StretchRes Specific Content
+----------------------------
+
+Since StretchRes is a preference bundle-only tweak (no springboard overlay,
+no custom icon, no in-app purchases, no external media), the Resources directory
+does not contain any binary or image assets. The tweak's "icon" is the default 
+iOS Substrate tweak icon, and the interface is entirely delivered through the
+OS preference settings panel via PSPreferences specifiers.
+
+What Would Go Here (If Needed)
+--------------------------------
+
+If future development adds:
+- Custom default images for the preference panel
+- Localization files for multiple languages
+- Helper data files or configuration resources
+- Screenshot assets for the tweak listing
+
+They would be placed in this directory. The Makefile does not currently 
+reference any resources from this directory, as the tweak's functionality
+is delivered through:
+- Theos Substrate runtime method hooking (Tweak.x)
+- PSPreferences specifier plists (Root.plist)
+- NSUserDefaults for preference persistence
+
+Compatibility Notes
+-------------------
+
+- iOS 15.0–15.8.8 compatible
+- Dopamine rootless jailbreak compatible
+- No dependency on bundle resources for core functionality
+
+Files in this directory:
+- README.md (this file)

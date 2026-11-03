@@ -1,0 +1,20 @@
+Libraries for StretchRes
+=======================
+
+This directory contains required third-party libraries, static libraries, 
+dynamic libraries, and their necessary headers.
+
+Libraries referenced:
+- None: The StretchRes tweak does not link against any third-party static 
+  or dynamic libraries. All functionality is implemented using:
+  - iOS system frameworks (UIKit, Foundation, CoreGraphics)
+  - Theos Substrate runtime (provided by the build environment)
+  - Standard iOS APIs compatible with iOS 15.0–15.8.8
+
+The tweak is designed to have zero external library dependencies beyond what 
+is provided by iOS and Theos, ensuring maximum compatibility and minimal 
+package size.
+
+Files in this directory:
+- (None - no third-party libraries required)
+- Documentation of API usage instead

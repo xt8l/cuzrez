@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PreferenceSpecifiers</key>
+    <array>
+        <dict>
+            <key>Type</key>
+            <string>PSGroupHeader</string>
+            <key>Title</key>
+            <string>StretchRes - Screen Resolution</string>
+            <key>Footer</key>
+            <string>iOS 15 compatible | Dopamine rootless</string>
+        </dict>
+        
+        <!-- Current resolution display -->
+        <dict>
+            <key>Type</key>
+            <string>PSLabel</string>
+            <key>Title</key>
+            <string>Current Resolution</string>
+            <key>DefaultValue</key>
+            <string>0x0</string>
+        </dict>
+        
+        <!-- Original native resolution display -->
+        <dict>
+            <key>Type</key>
+            <string>PSLabel</string>
+            <key>Title</key>
+            <string>Original Native Resolution</string>
+            <key>DefaultValue</key>
+            <string>0x0</string>
+        </dict>
+        
+        <!-- Custom width input -->
+        <dict>
+            <key>Type</key>
+            <string>PSNumberTextField</string>
+            <key>Title</key>
+            <string>Custom Width</string>
+            <key>DefaultValue</key>
+            <string>1334</string>
+            <key>MinimumValue</key>
+            <string>480</string>
+            <key>MaximumValue</key>
+            <string>4000</string>
+            <key>Key</key>
+            <string>custom_width</string>
+        </dict>
+        
+        <!-- Custom height input -->
+        <dict>
+            <key>Type</key>
+            <string>PSNumberTextField</string>
+            <key>Title</key>
+            <string>Custom Height</string>
+            <key>DefaultValue</key>
+            <string>750</string>
+            <key>MinimumValue</key>
+            <string>480</string>
+            <key>MaximumValue</key>
+            <string>4000</string>
+            <key>Key</key>
+            <string>custom_height</string>
+        </dict>
+        
+        <!-- Apply button -->
+        <dict>
+            <key>Type</key>
+            <string>PSButton</string>
+            <key>Title</key>
+            <string>Apply Resolution</string>
+            <key>Action</key>
+            <string>apply_resolution:</string>
+        </dict>
+        
+        <!-- Restore original resolution button -->
+        <dict>
+            <key>Type</key>
+            <string>PSButton</string>
+            <key>Title</key>
+            <string>Restore Original</string>
+            <key>Action</key>
+            <string>reset_resolution:</string>
+        </dict>
+        
+        <!-- Presets section -->
+        <dict>
+            <key>Type</key>
+            <string>PSGroupHeader</string>
+            <key>Title</key>
+            <string>Preset Resolutions</string>
+        </dict>
+        
+        <!-- Native resolution preset -->
+        <dict>
+            <key>Type</key>
+            <string>PSRadioButton</string>
+            <key>Title</key>
+            <string>Native</string>
+            <key>DefaultValue</key>
+            <string>native</string>
+            <key>Key</key>
+            <string>preset_selection</string>
+        </dict>
+        
+        <!-- 16:9 preset -->
+        <dict>
+            <key>Type</key>
+            <string>PSRadioButton</string>
+            <key>Title</key>
+            <string>16:9</string>
+            <key>DefaultValue</key>
+            <string>16:9</string>
+            <key>Key</key>
+            <string>preset_selection</string>
+        </dict>
+        
+        <!-- Custom stretched preset -->
+        <dict>
+            <key>Type</key>
+            <string>PSRadioButton</string>
+            <key>Title</key>
+            <string>Custom Stretched</string>
+            <key>DefaultValue</key>
+            <string>stretched</string>
+            <key>Key</key>
+            <string>preset_selection</string>
+        </dict>
+        
+        <!-- Portrait preset -->
+        <dict>
+            <key>Type</key>
+            <string>PSRadioButton</string>
+            <key>Title</key>
+            <string>Portrait</string>
+            <key>DefaultValue</key>
+            <string>portrait</string>
+            <key>Key</key>
+            <string>preset_selection</string>
+        </dict>
+        
+        <!-- Landscape preset -->
+        <dict>
+            <key>Type</key>
+            <string>PSRadioButton</string>
+            <key>Title</key>
+            <string>Landscape</string>
+            <key>DefaultValue</key>
+            <string>landscape</string>
+            <key>Key</key>
+            <string>preset_selection</string>
+        </dict>
+        
+        <!-- Enable/Disable tweak -->
+        <dict>
+            <key>Type</key>
+            <string>PSToggleSwitch</string>
+            <key>Title</key>
+            <string>Enable StretchRes</string>
+            <key>DefaultValue</key>
+            <string>1</string>
+            <key>Key</key>
+            <string>enable_tweak</string>
+        </dict>
+        
+        <!-- Auto apply after respring -->
+        <dict>
+            <key>Type</key>
+            <string>PSToggleSwitch</string>
+            <key>Title</key>
+            <string>Auto Apply After Respring</string>
+            <key>DefaultValue</key>
+            <string>1</string>
+            <key>Key</key>
+            <string>auto_apply</string>
+        </dict>
+        
+        <!-- Reset preferences button -->
+        <dict>
+            <key>Type</key>
+            <string>PSButton</string>
+            <key>Title</key>
+            <string>Reset Preferences</string>
+            <key>Action</key>
+            <string>reset_preferences:</string>
+        </dict>
+    </array>
+    
+    <key>prefs:title</key>
+    <string>StretchRes</string>
+    <key>prefs:filename</key>
+    <string>StretchRes</string>
+</dict>
+</plist>

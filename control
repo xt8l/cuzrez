@@ -1,0 +1,10 @@
+Package: com.stretchres.tweak
+Name: StretchRes
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: Developer
+Depends: mobilesubstrate, UIKit
+Description: StretchRes - iOS 15 screen resolution and aspect ratio tweak
+Section: Tweaks
+Authors: Developer
+License: MIT
